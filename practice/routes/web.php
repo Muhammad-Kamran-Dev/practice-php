@@ -1,18 +1,7 @@
-<?php
+    <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AppController;
 
-
-Route::get('/', function () {
-    return view('index');
-});
-
-// with parameter
-Route::get("/about/{name?}",function(){
-    return  "<h1>its About Page</h1>" ;
-});
-
-// with parameter optional
-Route::get("/about/{name?}",function(){
-    return  "<h1>its About Page</h1>" ;
-});
+Route::get('/', [AppController::class, 'index']);
+Route::get('/about', [AppController::class, 'about']);

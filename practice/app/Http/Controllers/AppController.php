@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
@@ -12,7 +11,13 @@ class AppController extends Controller
         return view("index");
     }
 
-    public function about(){
+    public function about()
+    {
         return view("about");
+    }
+
+    public function gallery()
+    {
+        return view("gallery");
     }
 }

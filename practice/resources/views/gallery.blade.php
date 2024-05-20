@@ -28,11 +28,12 @@
                         <a class="nav-link " aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class=" nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">About Us</a>
-                    </li>
-                    <li class=" nav-item">
                         <a class="nav-link active" href="{{ route('gallery') }}">Gallery</a>
                     </li>
+                    <li class=" nav-item">
+                        <a class="nav-link" href="{{ route('about') }}">About Us</a>
+                    </li>
+
 
 
                 </ul>

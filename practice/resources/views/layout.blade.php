@@ -20,7 +20,6 @@
 
 @endphp
 
-
 <!doctype html>
 <html lang="en">
 
@@ -32,8 +31,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <title> {{ $title }} </title>
+    <link rel="stylesheet" href="css/style.css">
+    {{-- <title> {{ $title }} </title> --}}
 </head>
 
 <body>
@@ -61,11 +60,42 @@
             </div>
         </div>
     </nav>
+    <div class="container-fluid main-layout my-4">
+        <div class="row h-full font-weight-bold">
+            <div class="col-12 col-md-2 mb-4 mb-md-0">
+                <div class="sidebar">
+                    <h2>Sidebar</h2>
+                    <ul>
+                        @foreach ($navLinks as $navLink)
+                            <li class="nav-item">
+                                <a class="nav-link {{ $navLink['active'] ? 'active' : '' }}"
+                                    href="{{ $navLink['url'] }}">
+                                    {{ $navLink['title'] }} </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 mb-4 mb-md-0">
+                @yield('content')
+            </div>
+            <div class="col-12 col-md-2 ">
+                <div class="sidebar">
+                    <h2>Sidebar</h2>
+                    <ul>
+                        @foreach ($navLinks as $navLink)
+                            <li class="nav-item">
+                                <a class="nav-link {{ $navLink['active'] ? 'active' : '' }}"
+                                    href="{{ $navLink['url'] }}">
+                                    {{ $navLink['title'] }} </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
-
-    <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

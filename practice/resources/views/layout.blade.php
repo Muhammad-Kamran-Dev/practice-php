@@ -7,14 +7,14 @@
             'active' => request()->routeIs('home'),
         ],
         [
-            'title' => 'About',
-            'url' => route('about'),
-            'active' => request()->routeIs('about'),
-        ],
-        [
             'title' => 'Gallery',
             'url' => route('gallery'),
             'active' => request()->routeIs('gallery'),
+        ],
+        [
+            'title' => 'About',
+            'url' => route('about'),
+            'active' => request()->routeIs('about'),
         ],
     ];
 
